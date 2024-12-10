@@ -49,10 +49,15 @@ const Welcome = () => {
             Where Creativity Meets Innovation: Embark on a Journey of Limitless
             Exploration with Aora
           </Text>
-          <CustomButton />
+          <CustomButton
+            title="Continue with Email"
+            handlePress={() => {
+              router.push("/sign-in");
+            }}
+            containerStyles="w-full mt-7"
+          />
         </View>
       </ScrollView>
-
       <StatusBar backgroundColor="#161622" style="light" />
     </SafeAreaView>
   );
