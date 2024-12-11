@@ -21,6 +21,13 @@ const SignUp = () => {
           <Text className="text-2xl text-white text-center text-semibold mt-10 font-psemibold">
             SignUp to Aora
           </Text>
+
+          <FormField
+            title="Username"
+            value={form.username}
+            handleChangeText={(e) => setForm({ ...form, username: e })}
+            otherStyles="mt-7"
+          />
           <FormField
             title="Email"
             value={form.email}
@@ -35,20 +42,20 @@ const SignUp = () => {
             otherStyles="mt-7"
           />
           <CustomButton
-            title="Sign in"
+            title="Sign up"
             handlePress={submit}
             containerStyles="mt-7"
             isLoading={isSubmitting}
           />
           <View className="flex justify-center pt-5 flex-row gap-2">
             <Text className="text-lg text-gray-100 font-pregular">
-              Don't have an account?
+              Have an account already?
             </Text>
             <Link
-              href="/sign-up"
+              href="/sign-in"
               className="text-lg font-psemibold text-secondary"
             >
-              Signup
+              Sign in
             </Link>
           </View>
         </View>
