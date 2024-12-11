@@ -27,11 +27,7 @@ const RootLayout = () => {
 
   if (!fontsLoaded && !error) return null;
   return (
-    <Stack
-      screenOptions={{
-        headerShown: false, // 기본적으로 모든 스크린에서 헤더 숨김
-      }}
-    >
+    <Stack>
       <Stack.Screen name="index" />
     </Stack>
   );
